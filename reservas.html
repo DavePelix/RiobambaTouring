@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Reserva tu Hotel! - Riobamba Touring{% endblock %}
+
+{% block content %}
+<h1>Descubre Riobamba!</h1>
+    <form action="/reservar" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="hotel">Hotel:</label>
+        <select id="hotel" name="hotel">
+            {% for hotel in hoteles %}
+            <option value="{{ hotel.nombre }}">{{ hotel.nombre }} - {{ hotel.ubicacion }} - ${{ hotel.precio_por_noche }}/noche</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="habitaciones">Cantidad de habitaciones:</label>
+        <input type="number" id="habitaciones" name="habitaciones" required><br>
+
+        <label for="fecha_entrada">Fecha de entrada:</label>
+        <input type="date" name="fecha_entrada" placeholder="Fecha de Entrada" required><br>
+
+        <label for="fecha_salida">Fecha de salida:</label>
+        <input type="date" name="fecha_salida" placeholder="Fecha de Salida" required><br>       
+
+        <button type="submit">Reservar</button>
+    </form>
+{% endblock %}

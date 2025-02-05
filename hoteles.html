@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+    
+{% block title %}Hoteles - Riobamba Touring{% endblock %}
+
+{% block content %}
+<h1>Hoteles a Disposición</h1>
+    <ul>
+        {% for hotel in hoteles %}
+        <li>{{ hotel.__str__()}}</li>
+        <img src="{{ hotel.getImagen() }}" alt="{{ hotel.nombre }}"
+        style="width:200px; height:150px; object-fit:cover; border-radius:8px;">
+        {% endfor %}
+    </ul>
+{% endblock %}

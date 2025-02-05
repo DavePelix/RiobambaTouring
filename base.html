@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">    
+    </head>
+    <header>
+        <div class="logonombre">
+        <img src="../static/logochico.jpg"  alt="logo" class="logoimg">
+        <h2 class="logonombre"> Riobamba Touring</h2><br>
+        </div>
+    </header>
+    <body>
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/hoteles">Hoteles</a>
+            <a href="/reservas">Reservas</a>
+            <a href="/contacto">Contáctanos!</a>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+    <footer>
+        <div class = "footer">
+        <h2>Elaborado por Erick Cujilema y Dave Vásquez</h2>    
+        <img src="../static/marca.gif">
+        <h2>©Derechos Reservados</h2>
+        </div>
+    </footer>
+</html>

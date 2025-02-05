@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Riobamba Touring{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a Riobamba Touring</h1>
+    
+    <main>
+        <section class="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Riobamba Touring es una empresa especializada en brindar las mejores experiencias de alojamiento en Riobamba y sus alrededores. Nos enfocamos en ofrecer un servicio de calidad con opciones de hospedaje para todo tipo de viajeros.</p>
+            <img src="../static/lomaquito.webp"  alt="imagen" 
+            style="width:200px; height:150px; object-fit:cover; border-radius:8px;">
+        </section>
+
+        <section class="mision-vision">
+            <div class="mision">
+                <h2>Misión</h2>
+                <p>Ofrecer a nuestros clientes las mejores opciones de hospedaje y experiencias en Riobamba, con un servicio de calidad y atención personalizada.</p>
+            </div>
+            <div class="vision">
+                <h2>Visión</h2>
+                <p>Ser la plataforma líder en reservas de hoteles y experiencias en Riobamba, destacándonos por la excelencia en el servicio.</p>
+            </div>
+        </section>
+
+        <section class="valores">
+            <h2>Nuestros Valores</h2>
+            <ul>
+                <li><strong>Compromiso:</strong> Ofrecemos un servicio de calidad y confianza.</li>
+                <li><strong>Hospitalidad:</strong> Brindamos una experiencia cálida y acogedora.</li>
+                <li><strong>Innovación:</strong> Mejoramos continuamente nuestros servicios.</li>
+                <li><strong>Responsabilidad:</strong> Promovemos el turismo sostenible.</li>
+            </ul>
+        </section>
+                
+        <img src="../static/skyview.jpg"  alt="imagen" style="width:550px; height:250px; object-fit:cover; border-radius:8px;">
+
+    </main>
+
+    <section class="opiniones">
+        <h2>Opiniones de nuestros clientes</h2>
+        <p>"Excelente servicio y muy buena ubicación. Volveré pronto." - Andrés S.</p>
+        <p>"Las habitaciones son cómodas y el personal es muy amable." - Elkin B.</p>
+    </section>
+{% endblock %}
