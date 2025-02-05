@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Confirmación de pago{% endblock %}
+
+{% block content %}
+  <form action="/pagoconfirmado" method="post">
+    <h1>Información de pago</h1>
+    
+    <div class="input-group">
+      <label for="nombrePago">Nombre completo:</label>
+      <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+    </div>
+
+    <div class="input-group">
+      <label for="tarjeta">Número de tarjeta de crédito:</label>
+      <input type="text" id="tarjeta" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19" required>
+    </div>
+
+    <div class="input-group">
+      <label for="fecha-vencimiento">Fecha de vencimiento:</label>
+      <input type="month" id="fecha-vencimiento" required>
+    </div>
+
+    <div class="input-group">
+      <label for="codigo-seguridad">Código de seguridad:</label>
+      <input type="password" id="codigo-seguridad" maxlength="3" placeholder="xxx" required>
+    </div>
+
+    <button type="submit">Confirmar pago</button>  
+  </form>
+{% endblock %}
